@@ -1,4 +1,4 @@
-![TBOT](/public/logo.PNG)
+![TBOT](/public/thrid.PNG)
 > :earth_americas: Bot de Telegram que te indica que hacer hoy en Madrid.
 
 ![TBOT](/public/bot.PNG)
