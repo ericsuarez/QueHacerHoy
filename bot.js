@@ -75,6 +75,10 @@ const Telegraf = require('telegraf')
 const bot = new Telegraf("485539066:AAGkzmUVw4CDCfDsd9gc-qfeE14Q-4ggqss")
 
 
+bot.catch((err) => {
+  console.log('Ooops', err)
+})
+
 bot.start((ctx) => {
   console.log('started:', ctx.from.id)
   return ctx.reply('Conoce todo tipo de activadades realizables en Madrid para hoy. Para hacerlo solo tienes que enviar el comando /todo. Have fun!.')
@@ -83,7 +87,7 @@ bot.start((ctx) => {
 
 
 bot.command('help', (ctx) => ctx.reply('Usa /todo para ver las actividades!'));
-bot.hears('/todo', (ctx) => ctx.reply(textazo));
+bot.command('todo', (ctx) => ctx.reply(textazo));
 
 
 
